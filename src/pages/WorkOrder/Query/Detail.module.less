@@ -1,0 +1,17 @@
+@import '~antd/lib/style/themes/default.less';
+
+@prefix: ~'@{ant-prefix}';
+@descriptions-prefix: ~'@{prefix}-descriptions';
+
+.work-order-detail {
+  :global {
+    .@{descriptions-prefix} {
+      &-item-label {
+        vertical-align: top;
+      }
+    }
+    pre {
+      margin-bottom: -4px;
+    }
+  }
+}

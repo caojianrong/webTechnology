@@ -1,0 +1,35 @@
+.mainBox {
+  // background-color: red;
+  .head {
+    font-weight: 600;
+    .line {
+      margin-bottom: 10px;
+    }
+  }
+  .content {
+    display: flex;
+    margin-top: 20px;
+    > div {
+      margin-right: 20px;
+      .title {
+        height: 40px;
+        line-height: 40px;
+        // text-align: center;
+        padding-left: 10px;
+        font-weight: 600;
+      }
+      .detail{
+        .line{
+          display: block;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  .divce{
+    border-bottom: 1px solid #222;
+  }
+  .footer{
+    text-align: right;
+  }
+}

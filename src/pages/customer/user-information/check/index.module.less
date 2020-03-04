@@ -1,0 +1,45 @@
+@import '../../variable.less';
+.content {
+  overflow: hidden;
+  background-color: @main-bg-color;
+  padding: 0 @main-space;
+  margin: 0 @main-space;
+  font-size: @form-font-size;
+  .infoBox {
+    min-height: 50vw;
+    margin-top: 50px;
+    h5 {
+      margin-bottom: 10px;
+    }
+    .detailBox {
+      padding: 0;
+      .detailItem {
+        display: flex;
+        margin-top: 12px;
+        list-style: none;
+        .itemName {
+          display: block;
+          width: 88px;
+          padding: 6px 0;
+          color: #333;
+          font-size: 12px;
+          line-height: 17px;
+          text-align: right;
+        }
+        .itemContent {
+          margin-left: 10px;
+          padding: 6px 0;
+          color: #333;
+          font-size: 12px;
+          line-height: 17px;
+        }
+      }
+      .detailItem:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .infoBox:first-child {
+    margin-top: @main-space;
+  }
+}

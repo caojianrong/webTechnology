@@ -1,0 +1,23 @@
+@import '../../variable.less';
+.content {
+  overflow: hidden;
+  background-color: @main-bg-color;
+  padding: 0 @main-space;
+  margin: 0 @main-space;
+  font-size: @form-font-size;
+  h5 {
+    margin-top: @main-space;
+    margin-bottom: @search-space;
+  }
+  .formWrapper {
+    min-width: @form-min-width;
+    width: @form-min-width;
+    .twoflex {
+      width: 45% !important;
+    }
+    .twoflexother {
+      width: 45% !important;
+      margin-left: 10%;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import '../../variable.less';
+.content {
+  overflow: hidden;
+  background-color: @main-bg-color;
+  padding: 0 @main-space;
+  margin: 0 @main-space;
+  .stepsWrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .stepsTitle {
+      width: 70%;
+    }
+  }
+  .stepsContent {
+    margin-top: @search-space;
+    min-height: 200px;
+    padding-top: 50px;
+  }
+  .stepsAction {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .btnSpace {
+      margin-left: @search-space !important;
+    }
+  }
+}

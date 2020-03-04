@@ -1,0 +1,31 @@
+@import '../../variable.less';
+.cardContent {
+  margin: 0 @main-space;
+  .selectWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: @form-font-size;
+    padding: @main-space 4px;
+    .searchForm {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .searchFormItem {
+        display: flex;
+        margin-bottom: 0;
+        padding-left: @search-space;
+        input {
+          width: @input-width;
+        }
+      }
+    }
+    .btnWrapper {
+      display: flex;
+      margin: 4px @search-space 0;
+      .clearBtn {
+        margin-left: @search-space;
+      }
+    }
+  }
+}

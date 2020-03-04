@@ -1,0 +1,32 @@
+.card {
+    text-align: center;
+
+    .cardbody {
+        text-align: left;
+
+        .carditem {
+            float: left;
+            width: 50%;
+            line-height: 40px;
+
+            label {
+                display     : inline-block;
+                width       : 120px;
+                text-align  : right;
+                margin-right: 10px;
+                height      : 40px;
+            }
+
+            a {
+                img {
+                    display        : inline-block;
+                    width          : 120px;
+                    height         : 120px;
+                    background     : no-repeat center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+}

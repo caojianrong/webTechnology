@@ -1,0 +1,22 @@
+@import '../../variable.less';
+.content {
+  overflow: hidden;
+  background-color: @main-bg-color;
+  padding: 0 @main-space;
+  margin: 0 @main-space;
+  .detailWrapper {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: @main-space 0 13px 0;
+    flex-wrap: wrap;
+    .detailItem {
+      font-size: @form-font-size;
+      margin-left: 50px;
+      list-style: none;
+    }
+    .detailItem:first-child {
+      margin-left: 0px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.IceContainer{
+  background-color: rgb(255, 255, 255); border-radius: 6px; padding: 20px; margin-bottom: 20px;
+}
+.buttonGroup{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 20px 0;
+  button {
+    margin-left: 20px;
+  }
+}
+.centerButton{
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0;
+}
+.title {
+  margin: 0 0 16px 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 32px;
+}
+.spaceBetween{
+  display:flex;
+  justify-content: space-between;
+}
+.ant-form{
+  min-width: 900px;
+}

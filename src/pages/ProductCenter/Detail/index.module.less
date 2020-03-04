@@ -1,0 +1,36 @@
+@import '../variable.less';
+.content {
+  overflow: hidden;
+  background-color: @main-bg-color;
+  padding: 0 @main-space;
+  margin: 0 @main-space;
+  font-size: @form-font-size;
+  .infoBox {
+    margin-top: 50px;
+    h5 {
+      margin-bottom: @search-space;
+    }
+    .detailBox {
+      padding: 0;
+      .detailItem {
+        list-style: none;
+        margin-top: 12px;
+        display: flex;
+        .itemName {
+          display: block;
+          text-align: right;
+          width: 68px;
+        }
+        .itemContent {
+          margin-left: 10px;
+        }
+      }
+      .detailItem:first-child {
+        margin-top: 0px;
+      }
+    }
+  }
+  .infoBox:first-child {
+    margin-top: @main-space;
+  }
+}

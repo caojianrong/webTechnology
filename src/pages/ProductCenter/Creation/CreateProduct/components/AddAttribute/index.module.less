@@ -1,0 +1,43 @@
+@import '../../../../variable.less';
+.attributeWrapper {
+  .addAttribute {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px dashed #3c67b8;
+    color: #3c67b8;
+    font-size: @form-font-size;
+    padding: @search-space 0;
+    margin-top: 30px;
+    cursor: pointer;
+    .btnText {
+      margin-left: 6px;
+    }
+  }
+}
+.selectStyle {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.attributeComponent {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  .attributeInput {
+    display: flex;
+    .addButton {
+      margin-left: @form-font-size;
+    }
+  }
+  .tagBox {
+    display: flex;
+    .tag {
+      margin-top: @form-font-size;
+      border: 0;
+      background-color: #e8e8e8;
+      padding: 5px 12px;
+    }
+  }
+}
