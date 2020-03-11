@@ -1,0 +1,23 @@
+{
+  "id": "1527499",
+  "name": "厂厂宝",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4260678",
+      "name": "密码",
+      "font_class": "mima",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "10063196",
+      "name": "用户",
+      "font_class": "NMStubiao-",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    }
+  ]
+}

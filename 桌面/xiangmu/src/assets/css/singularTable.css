@@ -1,0 +1,151 @@
+.audiafter {
+    width: 18%;
+    float: left;
+    margin-left: 2%;
+    height: 32px;
+    line-height: 32px;
+    text-align: left;
+}
+
+.auditheadright {
+    float: left;
+    width: 80%;
+    height: 32px;
+    line-height: 32px;
+}
+
+.auditSolid {
+    height: 30px;
+    border-bottom: 2px solid #e4e7ed;
+}
+
+.senior_search {
+    float: right;
+    color: #659cfe;
+    line-height: 32px;
+    cursor: pointer;
+    margin-right: 36px;
+}
+
+.audited_down {
+    float: right;
+    color: #f89933;
+    line-height: 32px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.audit_search {
+    padding-left: 1%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e4e7ed;
+}
+
+.audit_search .el-date-editor{
+    width: auto;
+}
+
+.audit_search .el-form-item {
+    margin-bottom: 0;
+}
+
+.audit_search .el-form-item__label{
+    padding: 0 6px 0 0;
+}
+
+.audit_search .el-row {
+    margin-bottom: 8px!important;
+}
+
+.audit_search .el-input__inner {
+    height: 30px;
+}
+
+.audit_search .el-input__icon {
+    line-height: 30px;
+}
+.audit_search .el-button--medium {
+    padding: 4px 20px;
+}
+
+.el-tabs__header {
+    margin: 0!important;
+}
+
+.alert_default {
+    border-radius: 15px;
+}
+
+.audit_comname {
+    float: left;
+}
+
+.audit_comname {
+    line-height: 30px;
+    margin-left: 16px;
+}
+
+.table_com {
+    clear: both;
+    width: 97%;
+    margin: 0 auto;
+}
+
+.condition {
+    display: flex;
+}
+
+.demonstration {
+    margin-right: 10px;
+}
+
+.query_default {
+    width: 5%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    margin-left: 3%;
+}
+
+.tab_operation {
+    text-align: right;
+    /* margin-bottom: 10px; */
+    /* padding-right: 5%; */
+    margin-right: 200px;
+    /* height: 30px; */
+    line-height: 30px;
+    position: relative;
+    z-index: 888;
+}
+
+.tab_operation .el-button {
+    padding: 0;
+}
+
+.reset_tab {
+    width: 90px;
+    margin-right: 1%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin-left: 1%;
+}
+
+.sele_width300 {
+    display: block;
+    width: 300px;
+}
+
+.sele_width500 {
+    display: block;
+    width: 500px;
+}
+
+
+
+.list-box {
+    position: relative;
+    z-index: 10;
+    margin-top: -30px;
+}

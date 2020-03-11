@@ -1,0 +1,34 @@
+@import '../css/rest.css';
+.audit {
+    position: relative;
+    height: 100%;
+  }
+.audited_tit {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(191, 191, 191, 1);
+    padding-left: 18px;
+    position: fixed;
+    z-index: 999;
+    top: 57px;
+  }
+  .audited_tit .el-breadcrumb__item {
+    line-height: 40px;
+  }
+  .actived {
+    background: #eee;
+    color: #1e82d2;
+    font-weight: bolder;
+  }
+  .table_main {
+       width: 98%;
+       /* top: 56px; */
+       /* right: 20px; */
+       /* bottom: 16px; */
+       /* left: 20px; */
+       margin: 0 auto;
+       background: #fff;
+       height: 100%;
+  }
