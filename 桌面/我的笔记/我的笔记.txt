@@ -1,0 +1,1123 @@
+网站建设
+前期设计 盈利
+UI设计人员
+H5人员 登录页面，人员同时在线，
+JAVA程序员 数据库 搜索
+ 
+测试 会员权限
+
+上线  推广 百度线上推广 线下推广  维护
+
+ctrl+U
+新文档建
+代码提示
+文字大小
+F12快速预览（小地球）
+
+F8调出信息
+选框工具 可以截图
+C截图
+吸管 设色器
+用选框工具选中 复制 新建 确定 粘贴
+Ctrl+m
+
+首页命名index
+
+谷歌 F12代码调试工具
+站点 站点删除文件夹不会删除
+文件夹分类 CSS JS IMG 
+F5刷新
+
+布局标签
+div换行 一间间教室 每一个区块都有对应的div
+span不换行 一间教室里的每一个人 不带任何信息
+
+当图片出现错误时显示 替换文本里的内容
+当鼠标放在图片上时显示的提示内容
+有利于SEO（搜索引擎的优化）
+
+超链接< a href="#" title="提示"
+默认blank 本窗口打开
+链接具体的网址 http://www.baidu.com
+图片作为超链接  将文本换成图片
+
+URL
+链接到邮箱
+
+标签 路径
+
+编码格式 错误 网页解析出乱码
+
+HTML5基本结构
+<!doctype htlm5>声明文档类型
+<html>根标签
+	<head>头部
+		<title>网页标题</title>
+		<meta charset="utf-8">编码格式
+	</head>
+	<body>主体内容</body>
+</html>
+【基本语法】
+常规标签（普通标签、双标签）
+<标签 属性="" 属性=""></标签>
+空标签（单标签）
+<标签 属性="" 属性=""/>
+尖括号里的第一个单词：有标签、标记、元素
+点标签必须反斜杠隔开（XHTML）
+【文章标签】
+标题h1 h6
+【修饰标签】
+加粗b
+i em
+u
+del
+sup
+sub
+【特殊字符】
+&nbsp;
+&copy;
+&gt;
+&lt;
+&or;
+<br>
+<hr>
+【注释】
+<!--  -->
+【列表】
+有序列表：<ol type="" start="">
+		<li> </li>
+		<li>
+	  </ol>
+无序列表：<ul type="">
+		<li>
+		<li>
+	  </ul>
+自定义标签：<dl>
+		<dt></dt>
+		<dd></dd>
+	    </dl>
+【插入图片】
+<img src="图片路径" border="边框" width="" alt="替换文本" title="提示信息">
+alt title的区别：
+相同点：有利于SEO（搜索引擎的优化）
+不同点：alt当图片出现错误时显示的文字
+	title当鼠标放在图片上时显示的文字
+【超链接】
+<a href="路径" target=""></a>
+
+路径：
+【布局标签】
+div 外围结构
+span 设置某个节点 没有任何自带效果，不会换行显示
+
+
+【表格】
+以前用于布局设计，后被div、span代替，不利于后期维护
+
+
+【CSS】
+选择器{属性：属性值；}
+网站重构 改版
+属性可以有多个，不分先后顺序；如果是最后一个属性值，分号可以省略
+标签选择器：HTML的标签 HTML标签{属性：属性值；}
+/*font-size文字大小*/
+<!--内部样式表,放在<head>与</head>之间直接用style包裹-->
+<!--标签选择器-->
+
+class选择器 
+起名规则：不能用汉字，数字开头；最好不要使用HTML的关键字（HTML标签）。一个标签可以引用多个class名称中间用空格隔开。
+#替换成. 替换全部
+id class可以写外围结构，尽量用class
+
+【外部样式表】
+新建css文件
+<link rel="stylesheet" href="路径">
+color始终用来改变文字颜色
+rel="stylesheet"创建文档关联性
+
+<style>
+  @import url("路径"）;
+</style>
+
+区别：link @import
+1.link HTML提供的引用方式，还能引用其他文件
+2.link与HTML同时加载
+3.@import  IE5以上支持
+4.控制dom  调用选择器
+ link支持
+【内联样式表（内嵌、行间）】
+<h1 style="color:#f00;">
+优先级：内联
+
+【选择器的权重】
+继承的权重是最小的0000
+标签选择器的权重0001
+class选择器的权重0010
+id     0100
+内联样式表 1000
+后代选择器 包含之和
+！important 正无穷大
+
+【文字设置】
+		   单位
+font-size大小    px pt rem em	1em=16px=1rem 网页中常用偶数
+font-family字体  汉字字体，一组英文需添加引号 一个英文单词的字体不需要添加引号 {："","";}
+font-weight加粗  bold normal 
+font-style倾斜  italic normal
+font-variant将小写的字母变成小型的大写的字母
+color颜色
+line-height行高/行间距  单位：像素值/数字代表倍速 PS中行高的测量方法：第一排文字的上排到下一排文字的上边
+单行文字垂直方向居中显示：height line-height值一样
+综合性写法：font:font-variant font-weight font-style font-size/line-height font-family
+     font:font-size/line-height font-family
+【文本设置】
+文本修饰text-decoration  值:下划线underline
+                           上划线overline
+                           删除线line-through
+                           去超链接下划线none
+首行缩进text-indent      值：（可设置负值）取决于文字大小
+字符间距letter-spacing
+词间距word-spscing
+英文字母大小写text-transform  值：首字母大写capitalize
+                                  全部大写uppercase
+                                  全部小写
+                                      none
+水平对齐方式text-align      值：左left 右right 中center
+垂直对齐方式vertical-align  值:上top 中middle 下bottom
+文本阴影text-shadow         值（可设置多组，用“，”隔开）：水平偏移
+h1{text-shadow:5px 0px 0px #00f,0px 5px 0px #ff0
+【边框设置】
+border:粗细 线型 颜色（无顺序要求）
+可单独设置某个方向border-top/left/tight/bottom
+border-style的值：solid dashed double dotted none
+border-width border-style border-color
+border-left-color
+用边框制作三角形transparent透明
+div{width:0;border:20px solid transparent;border-left-color:#f00;}
+【列表设置】
+列表符号list-style-type:none无disc
+<style>
+  ul li{
+         list-style-type:none;
+         list-style-img:url(路径）;  图片做列表符号
+         list-style-position:inside(里边）outside
+【网页中支持的图片】
+
+有损压缩格式
+jpg
+png
+gif
+【背景设置】
+背景设置background:颜色 图片
+背景颜色background-color
+背景图片background-image:url(路径）
+背景图片平铺方式backgroung-repeat:
+背景图片的位置background-position:值1 值2（先左右后上下）x轴坐标 y轴坐标 x数轴为正，水平右移。可以是具体的方向值：（x）left center right (y)top ,center bottom.
+【float】
+float:left/right/none
+效果：可以将自上而下的元素自左向右排在一排
+元素浮动后脱离正常文本流，将其浮于空中，其他元素接替其位置，浮动元素在本行自左或自右排列，并遮挡一块区域，
+  造成文字环绕效果
+
+两个元素在一排显示，都要加浮动
+【清除浮动】
+clear:left/right/both
+清除浮动对自身的影响
+
+【盒子模型】
+margin border padding content
+padding 影响盒子实际大小，可出现背景颜色和背景图片，不可设置负值
+margin 不可出现背景颜色和图片，可设置负值
+     单独一个盒子margin不会影响盒子大小
+     一个大盒子里摆放许多小盒子，此时小盒子右margin会影响
+【盒子实际宽高算法】
+宽=width+padding+border+margin
+【margin-top不能正常显示的解决办法】
+1.给父元素添加padding，会影响盒子实际大小
+2.给父元素添加border，会影响盒子实际大小
+3.给父元素添加float,会脱离正常文本流，导致margin:0 auto不生效
+4.给父系元素添加overflow:hidden
+5.给自身写float
+上下margin发生重叠，取较大值，
+如果两个都有float属性，上下margin是两者之和
+上边float，下边清除float，上下margin是float元素的值
+左右margin两者之和
+能用padding不用margin
+
+要求：四区域距离20px横向排列安全区（版心区）
+思路：区域左浮动，margin20px,第四区域margin:0px,出现效果不显现的原因：权重不够大
+
+边框和内容之间的距离padding
+<style>
+	*{margin:0;padding:0;}
+	.top{width:  px;height:px;background:#ff0;margin:0 auto;}
+	.top div{
+	.top.last{
+	.last{
+</style>
+<body>
+	<div class="top">
+		<ul>
+			<li><div>1</div></li>
+			<li><div>2</div></li>
+			<li><div>3</div></li>
+			<li><div class="last">4</div></li>
+		</ul>
+	</div>
+</body>
+
+.banner img{width:100%;vertical-align:top;}/*图片会撑大3像素的解决办法添加vertical-align:top/middle/bottom*/
+.top a{color:red;text-decoration:none;}超链接的颜色不能给父系.top去设置，因为超链接本身有颜色
+.top a span{color:red;margin-left:7px;}
+.nav ul{float:right;}
+.nav ul li{float:left;list-style:none;width:100px;border-left:1px solid red;height:70px;text-align:centent;}(border默认与文本大小相同）
+.nav ul li img{
+.nav ul li a{
+.nav ul li:
+.nav ul li a:
+
+.main{
+.main div{
+.main div img{
+.main div h3{
+.main div p{
+.main div a{
+.main.xian{
+.main last{
+
+【溢出】
+overflow/overflow-x/overflow-y:
+【空白空间】
+pre：div与内容不在一行会解析 空格 回车换行 文字遇边界会换行
+pre-line:
+nowrap：强制在一排显示，将所有空格 回车换行忽略，<br>遇强制换行
+【显示省略号】
+text-overflow
+clip
+ellipsis
+单行文本溢出显示省略号的必要条件
+
+【结构】
+【表格布局】
+            table tr td
+            table tr td
+            table tr td 
+  sub table tr td     sub table tr td
+            table tr td
+【区块布局】
+DIV+CSS的布局，HTML文档结构定义不清晰
+            <div id="header">
+            <div id="nav">
+<div class="article">
+                         <div id="sidebar"
+<div id="section"
+            <div id="footer"
+【H5结构元素布局】
+可直接定义元素容器的内容
+              <header>
+               <nav>
+   <article>
+                      <aside>
+   <section>
+              <footer>
+【语义Web】
+利用<div>元素，把整个HTML文档分割成页眉、侧边面板、导航条。再辅以CSS，把这些区块转换成带边框的盒子或带阴影的分栏。
+
+
+【H5元素】
+按 内容类型
+内嵌
+流
+标题
+交互
+元元素
+短语
+都可通过CSS设定样式
+
+按 功能
+【基础元素】
+<!DOCTYPE>
+<html>
+<title>
+<body>
+<h1> to <h6>
+<p>
+<br>
+<hr>
+<!--...-->
+【格式元素】
+<acronym>
+<b>
+<em>
+<font>
+<i>
+<strong>
+<sup>
+<sub>
+<u>
+<wbr>
+【表单元素】
+<form>
+<input>
+<textarea>
+<button>
+<select>
+<optgroup>
+<option>
+<label>
+<datalist>
+【框架元素】
+<frame>
+<frameset>
+【图像元素】
+<img>
+<map>
+<area>
+<figure>
+【音频/视频元素】
+<audio>
+【链接元素】
+<a>
+<link>
+<nav>
+【列表元素】
+<ul>
+<ol>
+<li>
+<dl>
+<dr>
+<dd>
+<menu>
+【表格元素】
+<table>
+<caption>
+<th>
+<td>
+<thead>
+<tbody>
+<tfoot>
+<col>
+【样式/节元素】
+<style>
+<div>
+<span>
+<header>
+<footer>
+<section>
+<article>
+<aside>
+<details>
+<dialog>
+【元信息元素】
+<head>
+<meta>
+<base>
+【编程元素】
+<script>
+<noscript>
+<objict>
+ 
+
+
+
+【HTML属性】
+【基本属性】
+class 定义类规则或样式规则
+id 定义元素的唯一标识
+style 定义元素的样式声明
+ 
+不拥有基本属性的元素（一般位于文档头部，用来标记网页元信息）:html,head,title,base,meta,partam,script,style
+【语言属性】
+lang
+dir
+ 
+不拥有语言属性的元素：
+【键盘属性】
+
+【内容属性】
+定义元素包含内容的附加信息
+alt 元素的替换文本
+title 元素的提示信息
+longdesc 
+cite
+datetime
+【HTML5全局属性】
+可以对任何元素使用的属性
+class
+id
+style
+title
+
+
+CSS?Sprites的原理（图片整合技术）
+1、将导航背景图片，按钮背景图片等有规则的合并成一张背景图，即将多张图片合为
+一张整图，然后用background-position”来实现背景图片的定位技术。
+2、图片整合的优势：
+1）通过图片整合来减少对服务器的请求次数，从而提高?页面的加载速度，提高用
+户体验度
+2）通过整合图片来减小图片的体积。
+3、图像整合需要注意的事项：
+图像整合要留有足够的空间，图片不要过大最好不要超过100kb，最使用偶数
+4、CSS?Sprites的应用实现
+1）什么是精灵图(雪碧图)
+精灵图是对Sprites的翻译，它利用CSS背景图像可移动性，对网页用途进行的资
+源整合效果；
+2）精灵图特征：
+可以节省文件大小，将有规律性的网页图标整合在一张大图上，减少服务器请求次
+数；
+5、滑动门技术
+1）什么是滑动门
+滑动门是一个形象的称呼，它利用CSS背景图像可层叠性，并允许彼此之上进行滑
+动来创造一些特殊动态效果
+
+新增标签：
+结构标签：(块状元素)?有意义的div
+<article> ?标记定义一篇文章
+header> ?标记定义一个页面或一个区域的头部
+<nav> 标记定义导航链接
+<section> ?标记定义一个区域
+<aside> 标记定义页面内容部分的侧边栏
+<hgroup> ?标记定义文件中一个区块的相关信息
+<figure> 标记定义一组媒体内容以及它们的标题
+<figcaption> ?标签定义 figure 元素的标题。
+<footer> 标记定义一个页面或一个区域的底部
+<dialog> ?标记定义一个对话框(会话框)类似微信(火狐支持)
+
+【水平垂直居中】  
+固定宽高居中：定位四个方向清零margin：auto
+				定位 top：50%; left:50%; margin-top:-高一半; margin-left:-宽一半
+弹性盒display:flex; justify-content:center; align-items:center
+不固定宽高居中：定位四个方向清零margin：auto
+				加一个空标签 display:inline-block; vertical-align:middle; height:100%
+弹性盒display:flex; justify-content:center; align-items:center
+
+ 实现一个元素在父元素里面左右上下居中：
+        1: 在要居中元素的后面（不加回车键）添加空span
+        2：给span设置样式
+            width:0;
+            height:100%;
+            display:inline-block;
+            vertical-align: middle;
+
+        3:给要做居中的元素添加vertical-align:middle; 必须保证当前元素为inline-block;
+        4:给父元素添加text-align：center;
+
+Animation与transition的区别：
+相同点：都有过渡的效果，都可以设置时间、延迟、时间曲线
+不同点：animation可以设置次数，可以设置执行完成之后的状态，可以设置反向，可以设置暂停，当浏览器打开时直接执行，transition是当鼠标触发时才能执行，要想执行多次需要多次触发
+【景深】
+景深：距离屏幕多远的距离去观察（值越大效果越小）perspective:10px;
+两种写法一种写给父元素perspective：值
+写给transform：perspective(值)
+Transform：rotate3d(x,y,z,度数) 如果为1那么会旋转，为0不动
+
+
+Px固定大小单位
+Em：根据父元素的font-size值进行计算（如果低于12px浏览器会按照12px去解析）
+Rem：根据根元素的font-size值进行计算（如果低于12px浏览器会按照12px去解析）
+Vw：视窗宽度的百分比
+Vh：视窗高度的百分比
+Vw和vh会随着宽高的变化而发生改变
+
+如果HTML的font-size会发生改变，那么rem的值也会随着变化而变化，因此写页面的时候需要将HTML的font-size设置成vw、vh，然后里边所有宽高都用rem去表示
+
+如果设计师提供640的设计稿，那么应该是在320的屏幕尺寸上去显示，那么1vw=3.2px，如果HTML的font-size设置为100px，那么100里边有多少个3.2就是多少vw，100/3.2=31.25 即100px=31.25vw
+我们从设计稿中量出来的尺寸，首先要除以2（设备像素比dpr），然后除以HTML的font-size的值，得出的数是rem
+
+如果设计师提供750的设计稿，那么应该是在375的屏幕尺寸上去显示，那么1vw=3.75px，如果HTML的font-size设置为120px，那么100里边有多少个3.75就是多少vw，120/3.75=32 即120px=32vw
+我们从设计稿中量出来的尺寸，首先要除以2（设备像素比dpr），然后除以HTML的font-size的值，得出的数是rem
+
+
+    宽100%写给图片，不要写给整个div，div不要设高度，图片的放大缩小是成比例的。设置高度后会覆盖其他区域或留白。
+    图片切成一样大小，否则浮动时 
+【块状元素与内联元素的区别】
+都遵循盒模型设置（border，padding，margin），但内联元素的某些属性不能正常显示
+div 自上而下独占一行。可设置width height
+span自左向右在一排显示，直到遇见边界换行。不可设置width height
+块状元素div h1-h6 p ul ol li dl dt dd table tr from hr
+内联元素a span b i em u下划线 br img input textarea select option
+【元素类型的转换】
+display:
+block变成块状元素，如果给元素添加float相当于给元素添加display:float 
+inline变成内联元素
+inlink-block行内块  img input select
+none隐藏
+li
+
+
+line-height:单行文本的垂直居中
+text-align:center水平居中
+vertical-align:middle
+
+background-color
+【置换元素】
+
+【定位】position
+static
+relative相对于自身原来位置的偏移，不会脱离正常文本流，
+absolute绝对定位，会脱离正常文本流，不占据空间，不影响其他元素，不造成文字环绕，更具离得最近的有定位的父元素进行定位，如果父元素不存在定位，那么更具浏览器窗口去定位
+sticky粘性定位，做吸顶效果
+fixed固定定位，是否出现滚动条，给定位置保持不变。宽度没有设置，为内容宽度，如想要宽度%须手动去添加
+【定位的重叠】
+如果元素定位后会重叠在一起，谁在上边谁在
+Z-index显示顺序，必须与定位连用才能生效，值越大越在上边显示，默认auto，
+
+*{}
+div里的元素从左上角加载
+父元素存在margin:0 auto;用相对定位。不能用绝对定位
+安全区的宽度是固定的
+margin可以设置负值
+
+
+定位里即使宽度100%也要写，不然会造成图片不显示
+
+
+【最小高度的兼容写法】
+最低兼容IE8
+div里没有内容，min-height默认解析
+
+
+【元素宽高自适应窗口】
+html,body{height：100%}
+div{width:100%;height:100%;overfloew:hidden;}插入的图片会撑大3px
+
+高度塌陷 
+子元素浮动，父自适应元素高度
+overflow父元素中由内容会被裁切
+给浮动的元素后别添加一个空div，clear:both ,为防止被添加东西，加属性height:0;overflow:hidden；不利优化引擎的搜索于，喜欢结构接单清晰地页面，
+:afteer{count"";display:block;clear:both;overflow:hidden;}缺点父元素的塌陷
+给父元素设置高度，就谈不上a
+visibility :hidden隐藏，会留出一片空白位置保留，
+ display:hidden
+
+【为对象选这幅】
+：after必须与content连用 内容的后边 相当于添加一个标签，内联元素 相当于多了有一个标签，标签不够用时，但这个标签不用再内容中出现 可用于多行文本显示省略号 也可插入图片 url() 解决图片3px的问题， display:block;height:
+元素
+
+
+
+【兼容问题】
+1.网页插入图片撑大3px
+ 将结束标签如<div>与img在同一排显示
+ 给父元素设font-size:0
+超链接的图片会出现边框img:{border:0/none} IE浏览器
+2.双边距的 元素浮动后边距会加倍 给浮动的元素display:inline
+3.百分比 给浮到元素的右边添加clear：right
+4.鼠标变成小手型 
+5.按钮大小不一致
+ 
+【表单】
+type:text password radio checkbox submit buttom reset file image hidden
+内容和边界之间的距离padding
+浏览器解析出的默认值是不同的设置禁用
+lable 提示信息 以前p中的内容 只能用ID
+fieldset 会员设置禁用
+legend
+type="file multiple" 文件域 mutiple选择多个文件
+type="image"  图片域  100%等比例缩放
+
+【表格】
+thead tbody tfoot
+width:"300"/300px
+顺序thead tfoot tbody 优点：在CSS加载前就可加载全部表格数据，tbody样式加载前，H5数据已加载
+rules="cols /groups /rows /all"  一般用colgroup
+cols  区别：竖线有还是没有  设置第一列的颜色
+align水平
+cellspacing =CSS里的 border-spacing
+border
+必须写给table                  
+valign垂直
+
+
+块状元素除了div外都有默认样式
+html,body,p,h1,h6,ul,ol,li,dl,dt,dd,input,img,select,textarea,form,fieldset,iframe{}
+body{}
+a
+li{list-style:}
+img{vertical-align:top;}
+
+子选择器>:只管其后的一代，
+
+【HTML5】
+nav导航
+<!doctype html>
+IE会触发怪异盒模型
+实际width height=给定weight height
+占全屏width：100%
+box-sizing 怪异盒模型与标准盒模型的转换属性
+border-box怪异 content-box标准
+【不允许写结束符的标签】
+hr img input 
+【可以省略】
+tbody
+【新增的标签】
+head header nav section内容 footer main article文章 aside侧边栏 hgroup (figure figcaption)
+【】
+宽度不写默认占全屏
+position:absolutionl;后即使width100%也要写上，不然会出现滚动条
+
+select{border:none;height: ;background:transpra
+
+【video】
+type一定要写
+video inlink-block
+mp4 webm ogg
+controls autoplay loop poster
+【placeholder】
+输入文字时提示信息消失
+【autocomplete】历史记录
+【】
+【audio】
+inlink
+mp3 mp4 ogg
+【选择器】
+后代选择器 空格 后几代都控制
+子代选择器 > 只控制第一代
+兄弟选择器 + 往下找相邻的第一个兄弟 只能
+<div>	h2</h2>	</div> 		div:hover h2{display:none}
+div></div>	<h2></h2>	div:hover+h2/div:~h2{display:block}
+【去除边框】所有input写出的框
+input{outline:none}	
+【优雅降级/】
+
+【：target】<a>
+超链接锚点所在的ID元素 .wai :target P不一定放在第一位
+:target h3{color:
+<div>	top <h3>fj</h3>		</div>
+【】
+line-height height垂直居中
+a:after{content:"";display:block;width:0px;border:5px  solid transparent;border-left-color:#;float:right;margin-top:;margin-right;}
+a:hover{background:#;}
+:target p{height:;background:#;}
+:target a{background:#;}
+:target a:after{border-left-color:transparent;border-top-color:#;}
+div id="top1">
+	<a href="#top1" >第一</a>
+	<p>内容</p>
+</div>
+【label】单选按钮提示信息
+【结构伪类选择器】first/last 
+整个结构中的第一个:first-
+这个类型的第一个:
+整个结构中的第几个：nth-child(n)偶数2n/even 奇数odd/2n-1
+这个类型:nth-of-type(n)
+整个结构中的倒数：nth-last-child(n)
+:nth-last-of-child
+整个结构中只有这一个标签:only-child
+当元素内容为空时:empty
+【属性选择器】
+input[value]{}
+input[value~=""]
+=含有指定属性值
+^=起始
+&=结束位置存在
+*=任意位置
+a[href="#"]{}
+a[href="http://www.baidu.com"]{}
+:first-line :
+:befor :after与content 连用
+【border-shadow:inside 水平/垂直/模糊程度/颜色】
+阴影不占位置 
+【iconfont】字体图标库
+<link rel="stylesheet" href="iconfont"
+span class="iconfont icon- "
+span class="iconfont"> </span>
+【背景图片绘制的起点】从左上角加载 不是坐标
+background-clip显示范围
+background-origin绘制起点border-box/padding-box/content-box
+-size:cover等比例缩放，图不一定全部显示，元素区域都会出现背景图 填满整个元素
+：contain等比例缩放，背景图完全显示，不一定占满元素
+可以为一个标签设置多张背景图片，谁在前边谁在上边显示
+background-img只能引图片
+【border-image-source:
+border-image-slice:
+border-image-width:
+border-image-repeat:streth;
+border-image-outdset:
+四个角裁切像素，中间拉伸/重复
+border-image:url() 裁切位置/
+
+
+【ul】
+块状元素，不设置宽度，独占一行，100%
+float ul高度塌陷
+
+【弹性盒】
+display:flex
+flex-direction:row/column/row-reverse/column
+justify-content:flex-start/center/flext-end/space-around/space-between
+默认在一排显示，直到无法容纳时超出
+
+align-item center 居中
+【】
+fixd 永远更具浏览器窗口定位
+【】
+li默认内容width，父元素height
+flex-grow分配剩余空间
+flex分配父元素
+flex-basic子元素width
+flex-shrink：0；不允许缩放：1可以缩放 宽度不够时
+flex flex-basic/flex-grow/flex-shrink 0 1 1
+order 弹性子元素的显示顺序，可以设置负值，越小越靠前
+aign-self 单独子元素对齐方式
+flex-wrap 父元素允许换行
+flex:1;只要存在便一直解析 justify-content:space-around 解析失败
+
+【媒体查询】
+
+【移动端】
+float:left/right
+overflow:auto;
+图片只设宽度，等比例缩放
+窗口变大，内容增多
+内容间的距离变化
+内容变化
+
+【】
+html,body{height:100%;}
+body{display:flex;flex-direction:colum;}
+head{}
+section{flex:1;overflow:auto;}
+footer{}
+变成width：100%；双飞翼布局
+【DPR】
+html,body{height:100%}
+body{
+header{display:flex;justify-content:center;align-items:center;}
+header a{opacity:0.8;透明filter:alpha(
+img{display:block;
+li:nth-
+
+footer{
+弹性盒里没有内容不显现 父元素是弹性盒，子元素即使是内联也可以设height 
+图片改变block，vertical-align:top; text-align:right;不生效，p{display:inlink-block;} 
+em 更具父元素的font-size值计算 
+rem 根据根元素的值进行计算html
+浏览器吧低于12px的解析成12px
+vw视窗宽度的百分比 vh视窗高度的百分比
+如果html的font-size会发生改变，那么rem的值也会发生变化，因此写页面时将html的font-size值设置成vw vh ，然后里面所有宽高用rem表示
+640的设计稿，在320的屏幕上去显示，1vw=3.2px,
+html font-size
+s设计稿中量出来的尺寸，首先除以2，得到px，然后除以HTML的font-size的值
+*{}
+a{}
+li{}
+img{vertical-align:}
+html,body{}
+html{font-size:31.25vw;}
+body{display:flex;flex-direction:column;font-size:}
+header{height: rem}
+section{flex:1;overflow:auto；}
+【】
+320px 1vw=320px * 1%=3.2px  100px=100px/3.2px=31.25vw 
+【】
+【渐变】
+-web谷歌的兼容
+-
+background:-webkit-gradient(linear,0 0 ,100% 100%,from(#),to(# ））；
+background:-webkit-gradient(linear,0 0,0 100%,from(#),to(#));
+ left top,right bottom,
+背景图left right top bottom
+background:-webkit-gradient(linear,0 0,100% 100%,color-stop(0.1,rgb(255,0 ,0)),color-stop(0.9,rgb(0,0,255)));
+background:-webkit-linear-gradient(top/-90deg,red,blue,yellow,green)
+90deg bottom/ -90deg top/ 0deg left /180deg right
+radial镜像
+background：-webkit-radial-gradient(0 0,50% 50%,#,#,#)
+【渐变】
+li{width:100px;height:50px;}
+li:nth-child{transition:all(默认)/width/height 1s 2s(延迟执行时间）ease/ease-in/ease-in-out/；
+CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。要实现这一点，必须规定两
+项内容：
+1.规定把效果添加到哪个 CSS 属性上(不写默认all)
+2.规定效果的时长
+li:hover{width:200px;}
+【图片整合】核心background-position
+div{border:1px solid black;height:40px;width:1000px;}
+div a{width:px;float:left;line-height:px;background:url() no-repeat 6px -54px;transition:1s;}
+div a:hover{background-position:6px -
+
+【延迟】
+div {positon:relation;}
+p{position:absolution;叠在一起left:-300px}
+p:nth-child(1){top:30px;transition:1s lin
+transition不支持display:none/
+支持透明
+p{opacity:0;pointer-events(屏蔽鼠标事件）:none;}鼠标划上p没反应
+【】
+div{width:;height:;background:;transfrom:translate();}
+可单独设一个方向translatex/translatey()
+【偏移】
+translate:
+【旋转】
+rotate();
+rotatex/rotatey()
+【缩放】
+transform:scale( ,);
+一个值/两个值width，height
+scalex()width  sclex()height
+【扭曲】
+transform:skew()
+skewx()水平 skewy()垂直
+一个值相当于skewx 两个值skewx,skewy
+【复合写法】
+transform:rotate( deg) scale(deg) skew( deg);
+顺序不一样，解析的效果不一样
+【】
+div{width:;height:;border-radius:50%;}
+div img{width:;height:;border-radius:50%;border:;box-sizing:border-box;}
+<div> <img src=""> </div>
+【】
+div nav{
+div nav:hover{
+top/left right/bottom 一个color
+蒙上一层
+nav{background:rgba(0,0,0,0);
+nav:hover{
+旋转时出现文字
+div p{transform:translatey(-400px);opacity:0;}
+div p:hover{
+【】
+top p{
+top :hover p{right:0;}
+top :hover img{transform:rotate();}
+定位时，定出去的可以划上，屏蔽鼠标point-
+【基点】
+h1{transition:1s;transform-origin:center/left top/50px top/50px 10px/
+【扇子】
+ul li
+ul{position:absolute;top:;right:;left;;bottom;;margin:auto;}
+li{position:absolute;transform-orign:}
+li:nth-child(){transform:rotate(15deg);}
+划上一个划上所有，：hover在父集上
+h1:hover{transform:
+【】
+p{
+div:hover p{transform:translatex(500px)
+
+【】
+背景图片可以放多张，谁在前面写，谁在上面显示
+position：absolute; 时margin:0 auto不生效。用left:50%;margin-left:宽的一半；
+background:url() no-repeat ,url() no-repeat center 190px;
+div img{position:absolute;transition:10s;}
+div img:nth-child(){left:;top:;}
+body:hover div{transform:rotate(360deg);}
+body :hover div img{transform:rotate(-360deg);} 
+【关键帧动画】
+创建：@keyframes 名{from{可省略} to{}}
+引用：tag:{animation:名 1s延迟 infinite次数无限循环/1 forwards执行完成后保存状态/停止在结束位置 1s延迟 alternate下一周期反向执行 linear移动曲线}没有顺序{名 1s}
+@keyframes ming{0%{} 25%{} 50{} 100%{}}写在style最后边，分割时间
+-moz-兼容
+【】
+@keyframes pao{0%{background-position:0 0 ;} 15%{background-position:-180px 0;} 30%{background-position:-360px 0;}}
+【】
+相同：都有过渡的效果，可以设置时间、延迟、时间曲线
+不同：animation浏览器打开直接执行
+     transition鼠标触发
+【】
+html,body,div{height:100%;}
+img{position:absolute;width:100%;height:100%;}
+nav{position:absolute;bottom:px;width:;height:;left:50%;margin-left:-;居中display:flex;justify-content:space-between;}
+nav a{display:block;width:;heigh:;border:;text-align:center;}
+nav a:after{content:"";display:block;width:;height:;border-radius:50%;border:;position:absolute;left:;top:-;backgrround:url() center;}
+nav a:nth-child(2){background:url() center;}
+:target{z-index:10;}点击时图片浮出
+img:nth-child(2){}
+img:nth-child(2):target{z-index:10; 出现边框，文字由上向下出现，P换用固定定位解决fixed
+img:nth-child(3){transform:scale(0,0;)
+(5){transform:scale(0,0;) 
+【3D立方体】
+persective:100px;写给父元素
+persective(100px)写给自身transform
+【】
+transform-style:preserve-3d;  3d效果
+先旋转，再偏移
+transform:rotatex() translatez()
+@keyframes 名{
+【旋转相册】
+【多列】
+{列colum-count:3;列与列之间的距离column-gap:px;colum-style:;
+colum-span:1/all;在第一列/}
+图片只设置width等比例缩放，图片width：100%和父元素一样宽，占满屏幕
+【手机端边框1px的解决】
+缩放
+div{border-bottom:1px
+div{height:1px;
+【动画】
+<link rel="stylesheet" href="animate.min.css">
+【js】
+<script src="rem
+【】
+内联元素属性可以继承
+color除了a标签都可以继承
+【元素类型】
+内联 块状 可变元素
+相应式布局 更具设备尺寸显示不同效果 rem布局弹性盒
+
+
+可
+
+【起名】
+结构化 语义化
+
+img border:none
+jpeg
+
+
+【超链接的图【图片会有边框】
+
+
+div
+	img
+	em
+	p
+		a
+一排显示，都设浮动。子元素浮动，margin-top生效
+.top em{background:url() no-repeat left center;padding-left： ；margin-left：；}
+a标签margin-top不生效，line-height
+
+
+【bottom】
+div
+	p
+		a a span 
+		a aspan span
+		a a span span
+	p          p
+	p            p
+
+.bottom{padding-top:20px;}撑大，高度减20
+.bottom p{color: ;line-height: ;text-align: ;}
+.bottom p a{}
+.bottom p span{padding:0 8px;}
+
+
+<iframe src="top" class="top1" framerborder="0">
+<iframe src="bottom" class="botom1" framerborder="0">
+
+.top1{}
+.bottom1{}
+
+
+
+【body】
+合作厂商
+高度自适应
+div
+	h3合作span合作共赢span h3
+anquanqu{width: ;margin:0 auto;}
+anquanqu h3{}
+anquanqu h3 span{}打时换行 /加display:block
+	ul
+		li
+			a img span
+图片水平垂直居中，大小不一致的 加空标签
+display:inlink-block;
+li浮动ul高度塌陷
+ul{overflow:hidden;border-:}
+
+
+<a href="index.html" target="_blank”>网站
+
+iframer 会撑大3px，变成块状
+
+
+
+【】
+div
+	安全区div
+		文字默认撑大3-5px
+		span内联元素text-align
+		h3 h4
+ul高度塌陷
+li{} width height
+右边没有margin  内联样式表 单独设类 父元素overflow:hiden
+p h4 {padding
+li:before{content:"";display:block;width: ;height: ;position:sbsolution;
+li{position:relation;margin-top:65px;
+:before{background:background-position:left 160px;
+
+
+
+【】
+ul    ol    a span
+li	width = padding		text-align:center
+ul居中 margin: 0 auto;height:47px;
+li a{height:40px;
+li:hover{background:url() no-repeat left bottom}左右 上下
+
+
+【】
+注释 缩进
+
+【BFC】
+块状元素参与 自上而下
+内联元素 自左而右
+BFC box与float box
+overflow后触发BFC，计算高度时浮动的元素也参与高度的计算
+根元素 float position display overflow
+
+【两栏布局】
+.left{float:left;}
+.right{overflow:hidden;}
+【清除浮动造成的高度塌陷】
+浮动后内容的宽
+【防止重叠】
+<p>
+<div overflow:hidden><p></div>
+【注意顺序】
+
+div class="left"
+div class="right"
+div class="main"
+两边固定，中间自适应
+【不分顺序】
+style
+.left{position:absolute;left:0;
+.right{
+.main{height: ;overflow:hidden;margin-
+
+div class=left
+div class=right
+div class=center
+
+
+[[【】
+header{position:fixed;width:100%;background:rgb(0 0 0 .5)定位后width要写
+ul{display:flex;
+li:nth-chlid(5){flex-grow:1;}
+缩小后 右边消失div{max-width:
+
+<header>	<div>	<ul>	
+<li><img 
+<li><	
+@
+
+
+【】
+opacity:0.8透明
+a{flex:1；text-align:center;line-height:;}
+a :hover{}
+【】
+li>	<img>	<p>
+ul{display:flex;flex-wra:wra;margin-bottom:;}
+li{width:50%;box-size:border-box;怪异盒margin-bottom:;}
+li img{width:100%;border:1px solid #;box-sizing:border-box;}
+li:nth-child(2n+1){padding-right:;}
+li p{
+【】
+<li><img src="">
+ul{display:父集变成弹性盒;jusify-content:space-around;align-items:center;ul没有设高度，内容的高度，
+ul li img{display:block;
+块状元素设置text-align不生效
+line-height 单行文本垂直居中，对图片不生效，变成弹性盒
+【】
+div> <img> 
+     <nav>	<h3>
+		<p>
+     <span>
+div{display:flex;}
+nav{flex-grow:1;
+【】
+<div>	<span>></span>
+	<h3> </h3> 居中位置
+	<span> </span>空值

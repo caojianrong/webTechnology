@@ -1,0 +1,1232 @@
+//单行注释
+/*
+多行注释
+第二行
+*/
+变量的命名习惯：驼峰式命名，不要单用一个英文字母，最好用这个变量代表的英文单词
+关键字：var function static class break 
+保留字：未来可能成为的关键字
+等于是比较运算符
+赋值
+数学表达式  不常驻内存 可以计算出结果的语句
+优先级
+string字符串
+字符
+双引号、单引号，但并不是字符串的一部分，单双引号具有特殊意义，表示字符串开始或结束
+在字符串中输出双引号  转义字符\ 可以将有特殊意义的字符转换为普通字符\"a\"或'a"b"c'
+交替使用可以不用转义字符
+document.write()调用document的“写”方法
+document html文档对象
+.操作运算符 用来访问对象ID的属性或方法
+
+var a=100;//声明并初始化赋值
+字符必须由字母、数字、下划线、$符号组成
+console.log()在控制台上输出日志
+window.alert()一个警告框
+没有返回值，underfined
+window.可以省略
+window.confirm 警告对话框 有返回值类型boolean
+window.prompt()
+ECMAScript 262 中有6种数据类型
+number
+string
+boolean
+null空对象 有值
+underfined未定义 没有值
+confirm("tip")返回值boolean
+prompt("","")返回值string
+number 可以声明子集变量
+基础数据类型
+null 自己就是一个值固定不变的
+
+数据类型转换
+数据类型检测console.log(typeof(变量))
+显示 强制 手动
+d=Number(3)调用Number方法 调用函数
+  调用...的函数console.log()
+【】
+console.log(Number(b))括号可以不写
+NaN not a number  numbe类型
+console.log(Number(""))//0
+console.log(Number(" "))//0
+【】
+console.log(typeof a)
+【】
+console.log(Boolean(""))
+console.log(Boolean(" "))
+console.log(Boolean("abc"))
+console.log(Boolean("0"))
+有任何内容返回值为true
+【】
+console.log(Boolean(0))
+
+非0即为真
+【】
+boolean number
+console.log(Number(ture))//1
+【boolean string】
+console.log(String(true))//true
+【parseInt()】
+parseFloat()将字符串数字转换为浮点数字
+console.log(stypeof Number(a).toFixed(2)) string
+【隐式】
+number 默认4个字节
+string 默认8个字节
+优先将小的数据类型转换为大的
+数字5 蓝色    字符串5 黑色
+-表示数学运算
++数学运算 字符串的连接符
+【】
+typeof()返回值string
+console.log(typeof(typeof(10));"number"黑色的 string
+【】
+isNaN()方法先将参数转换为数字，如果转换成功返回false，  返回值boolean,是一个非数字
+console.log(isNaN("10"))//flase
+【运算符】
+数学运算符+ - * / %(取余，摩尔运算符）
+比较运算符== > < >= <= === !=（不等于） !== 返回值boolean
+console.log(1=="1");//true 只比较值是否相等
+console.log(1==="1");//绝对等于 比较 值，数据类型，内存地址
+((2+3)*2)
+逻辑运算符!(非) &&（与） ||(或)
+console.log(!0）;true
+console.log(!"0");
+console.log(!null);true
+console.log(!undefined);//true
+
+【&&】
+如果左边的表达式为真，会继续运行右边的表达式，最终返回右边的表达式
+如果左边的表达式为假，会立即停止计算右边的表达式，最终返回左边的表达式
+【||】或 输出左边
+console.log(2||3)如果或运算符左边为真，会立即停止计算右边的值
+console.log(0||3)如果或运算符左边为假，会继续计算右边的值
+【优先级】
+! * 
+【单目运算符】运算符左右两边只有一个变量的运算符
+右++  不参与本次运算
+++右  先自增1
+var k=0;
+console.log(k+++k+++k);
+【三目运算符】？: 问前面的值为true，返回：前面的值；问前面的值为false,返回：后面的值
+z=2>3 && 8 ?(3*9 ? 0:1) :(10)
+z=false && 8
+z=
+【】
+a+=b;//a=a+b
+a/=b;
+a%=b;
+【】
+console.log() document.write()没有返回值
+不能写成x=console.log()
+【位运算】
+<<左移位 >>右移位
+【】
+二进制 转 8进制
+从右边算，三位换一位8进制数
+111三位二进制的最大值 7
+【】
+左移 <<一位等于*2
+右移 >>一位等于
+【】
+条件分支语句
+if(1||2){
+	console.log();
+}else{
+	console.log();
+}
+【选择分支语句】
+if(2>3){
+	console.log();
+}else if(5>8){
+}else if(){
+}else可以不写{
+}
+【】
+switch(){
+	case 99:
+	break;
+【函数】
+关键字：function
+函数名：命名规则 命名习惯驼峰式
+():声明函数的组成部分，不可省略
+{}：函数主体部分
+只有被调用才会执行 functionName()
+一般将一个小的功能封装为一个函数块20-50行代码
+【循环】
+在网页上输出0-100
+while循环
+关键字
+()循环条件 制造条件
+{}循环体只有一句话可以省略
+	while(循环条件){}
+function shu(){
+	var i=0;
+	while(i++<=100){
+		document.write(i-1+",");
+	}
+}
+shu();
+【】
+var i=0;
+while(i<=100){
+	document.write(i+++",")
+}
+【】
+var i=0;
+while(true){
+	document.write(i+++",")
+	if(i>100);{
+		break;
+	}	
+}
+【】【do-while】
+do{
+}while(循环条件);
+【】
+输出0-100的奇数
+do{
+	if(i===2 || i===4 || ....)
+	if(i%2===1)
+	if(i%2!==0){
+		document.write(i+",");
+		i自增==2时，if条件为false，i++没有执行机会，会导致i恒等于2，一直满足循环，不满足if条件，会陷入死循环
+	}
+	i++；
+}while(i<=100);
+【】【区别】
+【】
+do{
+	document.write("")
+}while(0);//循环条件为false
+【】
+while(0){
+	document.write("")
+}
+【】【for】
+关键字for
+()不能省，必须有两个分号
+{}循环体 可省略
+for(声明并初始化变量;循环条件;控制循环条件){}
+现在调用会出现死循环  ;;里可以不写内容
+【】
+同时被3 7整除
+for(var i=0;i<=100;i++){
+	if(i%3===0 && i%7===0){
+		document.write(i)
+	}
+}
+【】
+for(var i=0;i<=100;i+=7){
+	if(i%3===0 && i%7===0){
+		document.write(i)
+	}
+}
+【错误】
+for(var i=0;i<=100;i++){
+	if(i%3===i%7){
+		document.write(i)
+	}
+}
+【】
+for循环中的debug
+第一次执行第三条语句不执行
+下一次循环中第三句先执行
+【】
+；中间有多个表达式用，隔开
+for（var i=1,n=100;i<10&&n<5;）
+【】
+for(var i=0;i<=10;i==){
+	if(i%2!==0){
+		continue;继续下一次循环，continue后的语句不会被执行
+		break;结束当前循环
+	}
+}
+【灵活的写法】
+while((i+2)<=100){}
+【】
+0-10输出10行
+for(var n=0;n<=10;n++){
+	for(var i=0;i<=10;i++){
+		if(n%2===1){
+			if(n%2===1)
+				document.write(i+",")
+		}else{
+			if(n%2===0)
+				document.write
+	}
+	document.write("<br/>")
+}
+while(n++<10){
+	document.write("...."+"<br/>")
+	if(n%2===0){
+		document.write("这是偶数行")
+		for(var i=1;i<=10;i+=2){
+			document.write(i+1+",")
+	}else{
+		for(var m=1;m<=10;m+=2){
+			document.write()
+		}
+	}
+	
+}
+【】控制循环变量，创建循环条件
+var s=0;
+for(var i=1;true;i=2*i+1,s++){
+	if(s<=20){
+		break;
+		}
+	document.write(i+",")
+}
+【】
+for(var n=0;n<10;n++){
+	for(var i=0;i<10;i++){
+		document.write("*")
+	}
+	document
+}
+【】
+for(var i=1;i<=1;i++){
+	document.write("*")
+}
+document.write("<br/>")
+for(var i=1;i<=2;i++){
+	document.write("*")
+}
+document.write("<br/>")
+【】
+for(var n=1;n<=10;n++){
+	for(var i=1;i>=0;i++){
+		document.write("*")
+	}
+	document.write("<br/>")
+}
+【】
+满足什么条件下打印*
+行号n=0 列号i=0
+  n=1 	    i<=1
+最左边的当成第9列
+for(var n=1;n<=10;n++){//控制行
+	for(var i=9;i<=n;i--){//控制列
+		if(i<=n){
+			document.write("*")
+		}else{
+			document.write("*")
+	}
+	document.write("<br/>")
+}
+【】
+————————|——————————
+————————|——————————
+————————|——————————
+————————|——————————
+————————|——————————
+——————————————————
+——————————————————
+——————————————————
+for(var n=5;n>=-5;n--){
+	for(var i=-5;i<=5;i++){
+		if(Math.abs()n+Math(i)<=5){
+			document.write("*");
+		else{
+
+【乘法表】
+for(var m=1;m<=9;m++){
+	document.write(m+"*9="=+m*9+"&nbsp;")
+}
+
+for(var n=1;n<=n;n++){//外层循环控制内层循环的执行次数
+	for(var m=1;m<=n;m++){
+		document.write(m+"*9="=+m*9+"&nbsp;")
+}
+外层循环控制内层循环的执行次数
+【水仙花数】
+三位数的每位数的三次方和等于改三位数
+function f2(){
+	var a,b,c//声明变量不要在循环内，声明一次可多次使用，只开辟一次内存，若在循环内，每循环一次，占用一次内存
+	for(var i=100;i<=999;i++){
+		a=i%10;
+		b=parseInt(i/10)%10
+		c=parseInt(i/100)
+		if(Math.pow(a,3)+Math.pow(a,3)+Math.pow(a,3)===i){}
+f3();
+【】
+sum+=Math.pow(-1*i)*-1/i
+【】
+调用函数时从代码区复制到执行区
+执行结束释放内存
+【】
+for(var y=5;y<=-5;y--){
+	for(var x=-5;x<=5;x++){
+		if(Math.abs(x)+Math.abs(y)<=5){
+			document.write("*");
+		}else{
+			document.write("*");
+		}
+	}
+	document.write("*");
+}
+【】
+function shape(x,y){//不许用var声明
+}
+shape(m,n);
+形参：定义函数时声明的参数，
+实参：调用函数时传递的参数
+优点：增加代码通用性 调用函数时的灵活性
+传参的基本思路：函数内创的常数量，变成一个可以传递的变量
+形参的作用：用来接收对应位置上实参的值
+function shape(m){
+	for(var i=1;i<=m,i++){
+		document.write(i)
+	}
+}
+shape()
+shape(50);
+【】
+function min(a,b,c,d,e){
+	var -min=a;//假设第一个参数最小
+	-min=-min>b?b:-min;
+	-min=-min>b?b:-min;
+	-min=-min>b?b:-min;
+	-min=-min>b?b:-min;
+	console.log();
+}
+min(34,55,33,2,5)
+js中，形参和实参数量可以不同，但一一对应
+实参：变量、表达式、
+常数量改变的用传参的方式实现
+/******start*******/
+/******over*******/
+【】***************************************************************************************************
+arguments
+在js中每一个函数自带一个arguments对象
+这个对象类似于数组
+索引值从0开始
+length长度
+arguements元素的访问方式arguements[]
+function min(a,b,c,d,e){
+	console.log(arguements);
+	console.log(arguements[0]);
+	console.log(arguements[1]);
+}
+使用场景
+function min(){
+	for(var i=0;i<arguements.length;i++){
+		console.log(arguements[i]);
+
+}
+1参数特别多的情况，写起来比较麻烦，使用arguements对象访问参数
+2不知道参数具体数量的时候
+callee指代码块
+function fx(){
+	console.log("aaa");
+	console.log(arguments.callee);
+}
+fx();
+console.log(fx)【】【】【】输出代码块
+*************
+arguments用来存储实参
+【】return
+函数返回值和传参是两个相反的方向
+函数的返回值返回给调用函数的表达式
+传参与返回值没关系
+如果函数没有return关键字做返回值，调用函数表达式的值为undefiend
+function even(){
+	for(i=0;i<=100;i+2){
+		sum+=i
+	}
+	return sum;
+}
+console.log(even())
+函数返回值如果被多次使用，保存在变量中，提高代码执行效率var a=10;return a;
+var odd=sum
+console.log(odd)【】【】
+*****************************************************************************************
+return结束整个代码块
+function fx(){
+	return 1;
+	return 2;
+}
+console.log(i)//返回1
+【】函数的连续调用
+返回函数名
+function fx(a){
+	console.log(a);
+	return fx;
+}
+var a=fx() //fx()就是fx
+var b=a()
+var c=b()
+fx()
+【】
+什么时候需要传参？
+当一个函数内的常数量在不同区域调用时可能会发生改变，这种情况下就可以把常量作为参数传递。
+functin compare(a,b){
+	return 2>3;//常数
+	return a>b;//参数
+}
+console.log(conpare(2,3));
+什么时候需要返回值？
+return a;
+console.log(a);不叫返回值
+函数执行完毕，结果需要参与其他运算
+【】【】【匿名函数】
+没有函数名的函数
+使用：1.保存给变量
+var fn=function (){}
+fn()
+2.保存给对象的属性、事件
+函数调用，事件驱动时执行
+DOM:document object modle
+<div id="block"></div>
+<script>
+document.getElementById("block").onclick=function(){
+elert("yo");
+}
+3.匿名函数的自调用：自我执行
+（function ()）{})()
+前面的（）和匿名函数结合成表达式，这样计算机就开始执行代码块
+（function ()）{}())
+使用：这个函数只使用一次
+传参：var 
+调用函数的返回值返回给表示式
+【递归】
+斐波拉契数列：
+function fx(n){
+【】
+**************************************************************************                
+【】
+js版本ES262
+【变量的作用域】变量的作用范围
+全局作用域：前端的工作中一个网页内有效的
+函数级作用：
+全局变量：
+局部变量：
+script标签内声明的变量整个网页内有效
+块级作用域：
+【变量提升】
+声明变量会被浏览器自动提升到作用域的顶端
+声明/函数和变量/定义都会被提升
+表达式不会被提升，有=运算符的地方
+声明，变量提升只提升声明定义部分，不提升赋值表达式
+function fx(){
+	for(var n=1;){alert()}
+【】
+var fx=function(){
+	console.log(1)
+}
+function fx(){
+	console.log(2)
+}
+fx()
+*******
+var fn=function(){
+	fn=10;
+	console.log("a");
+}
+function fn(){
+	console.log("b");
+}
+fn=fn()
+
+******
+var fn;
+function fn(){
+	console.log("b");
+}	//没用，会被下面的fn覆盖
+fn=function(){
+	fn=10;
+	console.log("a");
+}
+fn=fn()		// fn()输出a，但其返回值为undefined
+【】
+var a=10;
+function fx(){		 //var a;提升
+	console.log(a);  //undefined
+	var a=12;	 //a=12
+}
+fx()	
+【事件】
+窗口事件：
+window.onload=function（）{};等待网页加载完成在驱动函数执行
+window.onresize;当窗口尺寸发生改变触发
+window.onscroll;窗口滚动条
+window.onload=function(){
+	document.getElementById("") //获取元素，不然优先执行js代码，将显示null
+}
+鼠标事件：
+onclick;
+onmousemove;
+onmousedown;
+onmouseup;
+onmouseover;鼠标悬停、移动结束
+oncontextmenu;右键
+onmouseout;进入
+onmouseenter;
+onmouseleave;离开
+键盘事件：
+onkeydown;
+onkeypress;
+onkeyup;
+表单事件：
+onfocus;表单元素获得焦点
+onblur;失焦
+onchange;文本框、下拉框的选项内容发生改变
+********************************************************************************************************************
+【数组】
+内存	硬盘
+有序的内存单元集合
+作用：有序的保存各种类型的数据
+WHY用数组:用变量的缺点：声明变量多，变量名不易记住。
+var arr=[]	//声明并初始化数组	简写
+var arr;
+arr=[];
+var arr=new Array();	//构造类函数构造一个新数组实例对象
+类：概念	对象：真实存在的一个例子
+arr=[0]		//访问方式：数组名[索引/数组元素的位置]
+var arr2=[]
+console.log(arr2);//[]
+arr3=new Array(8)
+console.log(arr3);//
+初始化数组的两种方式：
+var arr=[4,3]
+arr4=new Array(4,3)
+console.log(arr3);//
+
+var arr=[];
+for(var i=1,n=0;n<50;i=i*2+1,n++){	//循环时一个变量解决问题困难时，再引入一个变量
+	arr[n]=i;
+}
+
+var arr=[1];
+for(var i=1;n<50;i++){
+	arr[i]=arr[i-1]*2+1;
+}
+
+【】
+数组分两部分存
+栈：在栈中存地址  在 存比较小的数据
+堆：在堆中存数据
+【】
+基本数据类型传参，传递的是值
+引用数据类型传参传递的是内存地址
+arr[0]=11；//通过对地址的位置进行操作	修改
+arr=11;//arr变量被重新赋值，更改数组名的指向	
+【数组排序】
+冒泡排序
+var arr=[];
+for (var i=1;i<=10;i++){
+	arr[i]=Math.floor(Math.random()*900)+100;//0<=N<1
+}
+console.log(arr[i])
+【选择排序】
+function fx(){
+	var arr=[];
+	for(var i=0;i<10;i++){
+		arr[i]=M
+	}
+}
+***********************************************************
+【】
+for(
+for(var n=list.length-1;n>1;n--){
+if(后一个数小于前一个数list[n]<list[n-1]）{
+	交换位置
+}	
+【】
+var flag;
+for (var s=0;s<list.length-1;s++){
+	flag=s;
+	for(var n=s+1;n<list.length;n++){
+		if(list[flag]>list[n]{
+			flag=n;
+		}
+	}
+
+	if(flag!==s）{
+		交换
+	}
+}
+***************************************************************************************
+【二维数组】
+var qr=[
+	[8,5,4,22,3]
+	[0,9,7,4,4]	//arr2
+	[]
+	]
+qr[1][2]二维数组的访问方式
+var item=null;
+for(var i=0;i<qr.length;i++){
+	for(var n=0;n<qr[i].length;n++){
+		document.write(qr[i][n])
+【字面量对象】
+数组：连续的内存单元，开始寻址计较慢
+无序的内存单元的集合，没有顺序，随机存
+var obj={}
+var obj2={
+	k1:value;
+	k2:value2;
+	k3:value3;
+	}
+var obj=new Object();构造函数
+访问；键值对方式console.log(obj.k2);
+obj2["k2"]灵活，能访问变量
+遍历：数据结构 for-in	其中的变量可以是任意名，无实际意义
+for(var key in obj2){
+	console.log(key,obj2[key]);
+【】
+obj.k5="value5"
+删除
+delete obj.k5
+【】
+join()
+pop():出栈
+push():返回长度
+排队 先进先出
+【】
+arr.sort()
+var 
+for(var i=0;i<arr.length-1;i++)***********************************************************************************************************
+【】
+charAt()
+String.fromCharCode()类的方法，描述人类
+indexOf()返回值：搜索string第一个char所在的索引值。存在返回>=0的数，不存在返回-1
+for(var i=0;i<s.length;i++){
+	if(s[i]===char){
+		return i;
+
+lastIndexOf()从右向左寻找
+replace(被替换的旧字符串，要替换过来的新字符串) ；一次只能换一个。要替换所有while（s.indexOf()>=0）{s=s.replace(,)}
+sudstr()
+substring(开始索引值，不包含结束)
+toUpperCase()
+trim()移除字符串首尾空格
+【】字符串和数组：不能交换两个数
+【】"use strict";
+this指向调用该方法的当前对象this不在指向全局	
+不许给常量赋值
+属性可以删除，变量不予许删除
+【】
+forEach(function(element,index,origin))；循环遍历
+prototype原型，指针
+map()返回什么，新数组里就是什么
+过滤器，条件筛选
+arr[i].name==="arigin";//arr[i]字面量对象
+***********************************************************
+【敏感词过滤】
+【密码格式】
+有数字，字母，特殊符号，大于6位
+将每一位拿出比较
+if(s[i].charCodeAt()>=48 && s[i].charCodeAt()<=57){n=true};//有数字
+if(s[i].toUpperCase().charCodeAt()>=65 && s[i].toUpperCase().charCodeAt()>=65){};//有字母
+if(
+	s[i].charCodeAt()>=0 && s[i].charCodeAt()<=48 ||
+	s[i].charCodeAt()>=0 && s[i].charCodeAt()<=48 ||
+	s[i].charCodeAt()>=0 && s[i].charCodeAt()<=48 ||
+	s[i].charCodeAt()>=0 && s[i].charCodeAt()<=48 ||
+【】
+var chars=[];;
+随机6位验证码，下角标是随机数，将验证码换成图片
+*************************************************************
+【】
+一个对象又可以细分出几个对象
+window对象 最顶层的对象
+window对象下的六大对象
+【BOM】
+window.history
+	back();
+	forward()
+	go(1);前进一个单位
+window.history.repla({字面量对象/随意的对象}，"","url")
+
+【】location
+.href;可代替超链接a
+带参跳转，页面跳转时在尾部加一个参数，
+<a href="http://www.baidu.com7777777"/>
+.port端口号
+.protocal协议
+window.onload=function(){
+	document.getElementById("skip").onclick=function(){
+		var date=new Date();
+		location.href=""=date.get
+统一资源定位符
+？后面的所有部分：url地址栏参数
+【navigator】浏览器 导航者
+【screen】
+【】【】【】
+window.onresize窗口尺寸/onscroll滚动条=function(){console.log(Math.random())}
+window.open(http://www.)跨网页操作，通过一个网页操作另一个网页
+window.setTimeout(function(){document.write("")},33333)延时器延迟代码执行顺序
+window.setInterval(function(){document.write("")},33333)定时器可重复执行
+异步：定时器、延时器、事件。代码和代码相对独立
+线程之间不受影响
+进程可分为若干子线程
+var a=window.setInterval(function(){document.write("1")},60)
+function output(){
+	var s="hhjjjkhjdihejkjaslfjo";
+	var i=0;
+	var a=window.setInterval(function(){//相当于循环
+		document.write(s[i]);
+		i++;
+		if(i>100){
+			window.clearInterver(a);
+		}
+},60);//电脑30ms刷一次屏
+output();
+【倒计时】
+function djs(){
+	//var date=new Date();
+	//var senver=date
+	var date=
+	var timer=
+	
+【】【】【】【DOM】有W3C标准，window没有标准
+DOM文档树
+【元素节点】
+增:appendChild(div)
+var _div=document.creatElement("div");//参数HEML标签名
+document.getElementsByTagName("body")[0].appendChild(div)
+删：romoveChild(_div)
+parentNode.romoveChild(_div);//parentNode
+document.getElementsByTagName("body")[0].appendChild(div)
+改:replaceChild()
+parentNode.
+document.getElementsByTagName("body")[0].appendChild(div)
+查:
+document.getElementsById("元素的ID名")
+document.getElementsByTagName("元素的标签名")
+document.getElementsByClassName("元素的ID名")
+document.getElementsByName("元素的ID名")
+document.querySelector("")
+所有东西（包含空格，回车）都成为：元素/节点/标签
+访问集合里面某个元素用：[数字]
+getElementsByClassName():获取表单元素集合；返回值为集合
+【属性节点】
+window.onload=function(){//页面加载完才能操作
+	增、改：setAttribute
+    	var _div=document.creatElement("demo");
+	
+   	查：
+	删：removeAttribute("class")
+	w3c标准属性的操作：
+		_demo.title="aaa";//增
+		console.log(demo.title);//读
+	自定义属性：
+		
+}	
+【总结】
+getAttribute&&setAttribute :属性节点，
+自定义的仅仅是属性
+属性依然是节点：添加属性，设置属性值，添加属性节点
+.className="css"//用。的方式给元素添加css类选择器
+【文本节点】
+window.onload=function(){
+    var div=document.creatElement("div");
+    document.getElementsByTagName("body")[0].
+}
+nodelist节点列表 length=
+文本内容也是一个文本节点
+	_body.innerHTML="aaa";
+	var 
+【样式节点】
+window.onload=function(){
+	行内样式:style.width
+backgroundColor
+    var div=document.creatElement("div");
+    document.getElementsByTagName("body")[0].
+	demo.style.width=""//
+}
+行外样式	不赋值便是获取
+window.getComputerStyle("")
+解决兼容问题：不能同时写，有一个会报错
+if(window.getComputedStyle)//有这个属性
+三种；_dome.currents前后顺序不能变，低版本获取不到变回报错
+**************************************************************
+document attribute属性
+body默认带一个text节点
+不换行自动换行解析textNode
+注意回车，换行符
+nodeType:元素的节点类型值==1，属性的节点类型2，文本节点3，根节点document9。
+*****************************************************************
+【子/父节点】
+window.onload=
+	childNodes:-s-集合
+赋值就是设置，不赋值就是访问
+
+操作之前先创建拿到一个元素
+********************************************************************
+【事件】
+使用：由浏览器驱动执行，自己只需将其定义好就行，不需进行设置其多会执行
+document目标对象this指向这个事件的对象
+e:Event事件对象，包含整个事件的详细信息，通过e可调到整个事件信息
+不用e,系统会通过argument获取
+解决事件对象获取的兼容：键盘事件
+【】
+给body添加事件，先找到body
+
+
+document.onkeypress=function
+*******************************************************************
+e.target事件源对象 鼠标点击的对象，div里的img.只有一个div时是相同的
+this当前 事件的对象
+window.onload=function (){
+	var _out
+事件冒泡：点了该事件相当于点了其父元素
+阻止事件冒泡：
+offsetX|offsetY放在body里，
+documnet.onmousemove=function(){
+小花瓣产生在鼠标的右下位置 ，鼠标在小花瓣上移动时，冒泡到document.onmousemove事件，也会产生一个新div，此div的position：absolute；top：px;left: px;为相对这个花瓣的偏移位置
+【事件捕获】
+外层事件向内层收缩的过程，
+【事件监听器】
+参数：事件类型，事件处理函数，(loolean,true捕获，)
+.addEventListener()可以同一元素的相同事件类型添加多个处理函数
+相同类型
+移除：function
+	remove
+解决兼容问题：
+调用函数等于复制函数
+事件委托：利用事件冒泡原理，将该事件委托给父元素执行
+********************************************************************
+【正则表达式】规则表达式
+作用：用来匹配、替换、查找字符串。
+自己定义规则，去检索操作字符串
+语法：/表示开始结束/
+	^字符串开始位置
+属性：	g:global 全局匹配
+	m:mltiple多行匹配
+	i：ignore忽略大小写
+元字符：\w:word匹配字母数字下划线
+	\d:digital匹配数字
+	\s
+	\W变成大写 非
+量词，表示数量的词
+？
+*****************************************************************
+【】
+【声明常量】
+const:声明常量
+	声明并初始化
+	不能被重新赋值
+	不能被重新赋值
+	优点：方便代码维护，降低代码逻辑错误
+	习惯:常量名全部大写
+声明变量的关键字：let 
+	比var要求严格
+	同一作用域不能重名
+	不再变量提升
+	增加块级作用域
+块级作用域：一个大括号就是一个块，
+function f1()
+{
+	for(var i=0;i<10;i++){}
+	console.log(i)//没有块级作用域
+}
+function f2()
+{
+	let a=3;
+	{
+		let a=4;
+		console.log(a);
+	}
+	console.log(a)
+}
+【】
+不是数组，表示一个结构，前后结构必须完全符合，数量不做要求
+let [a,b,c]=[3,4]
+字面量对象是带值的
+字面量对象格式：
+let {m,n}={m:10,n=20}
+let {x:[y,z]}={x:[10,20]}//x不是表量
+解构赋值的作用：
+	方便数据交换
+	可以一次返回多个值
+	可以展开一个数组
+		console.log([1,2,3,4])//输出一个数组
+		console.log(...[1,2,3,4])//输出数组中的一个个数字
+反引号`
+let a=
+let tem=`dhjjsk
+slice 切 加
+占位符
+
+【】
+this不能被重新赋值
+bind是函数的方法，函数内的this指向bind的参数
+var obj={}字面量对象
+var obj=
+new function()
+【箭头函数】
+	和匿名函数的相似之处
+	1.可赋值给变量，事件，
+(function()
+	{
+	console.log("aaaa")
+	}
+)()
+不同：
+	Array是一个函数 Array instanceof Function
+【】
+let _set=new Set();
+_set.add("anything")添加
+_set.delete()删除
+_set.has()检查是否有
+_set.clear()
+
+Set以键值对方式存储，
+of也能遍历数组，不能遍历字面量对象，因字面量对象不能被迭代循环的方式
+
+【Map对象】
+方法：set 
+	get
+	has
+	delete
+*********************************************************************
+【运动】
+原理：修改元素的CSS样式
+小圆
+function main()
+{
+
+}
+window.onload=main;//main指向代码块*******************
+
+【边界处理】
+html.body{}
+#container{}
+#container div{}
+
+function main()
+{
+	let _body=document.getElementsBy
+}
+【加速减速运动】
+.offsetLeft+5匀速
+.offsetLedt+(i+=0.5)匀加速
+.offsetLedt+(Math.random()*10)
+【轮播图】
+div
+div	img
+	img
+	img
+function create()
+{
+	let -div=document.createElement("div");//创建一个框
+}
+function next()
+{
+	_time=window.setInterval(function()
+		{
+			//图片加载完成后延时2秒，就不再用此延时器
+		},2000)	
+}
+function opacity()
+{
+	let opacity=0.2;
+	let _time=window.setInterval(function()
+		{
+		},30)
+}
+function events()
+{
+	for(let i=0;
+	{
+		_group.children[i].onmouseover=function()
+			{
+			_group.parentNode.children[0].children[0].src=this.src;//善用this
+			window.clearInterval(_time);//设为全局变量
+			}
+	}
+}
+function main（）
+{
+	create()//创建body
+	opacity(_body.children[0].children[0].children[0];
+}
+
+let _index=_url.match(/\d+\.jpg$/g))[0].replace(/\.jpg/g)
+
+【面向对象】
+重新定义对象的权利
+class aaa()//这一类对象
+{
+	f1()//
+	{
+		console.log()
+	}
+	f2()
+	{
+		console.log()
+		this.time=window.//this调用该方法的当前对象，函数会改变this的指向，
+	}
+
+}
+a=new aaa();
+b=new aaa();//这两个实例对象是不同的
+a.f1();
+*****************************************************************************8
+【】创建obj对象
+const _bank={	//具有唯一性，不能new一个新对象，
+}
+var _obj={}
+添加属性：_obj.a=10;_obj["a"]=10;//能用点的地方都能用方括号
+const _cat={
+	leg:4,	//键名必须是字符串
+	eye:2,
+	catch:function(){	//方法
+	}，
+	eat:function(){}	//不需要逗号
+}
+访问：_obj.leg;
+	_obj.catch();
+	_obj["catch"]()
+【】
+JSON对象的方法
+JSON.stringify(_object);
+JSON.parse(_string);将JSON格式的字符串转成字面量对象	键名必须有双引号
+【京东购物车】
+需要保存的信息：产品的唯一识别号，数量，参数说明
+数据存储结构
+存储工具：localStorage本地存储器
+使用方式：
+window.localStorage.getItem("bbbb")
+window.localStorage.setItem("bbbb",'[{"ID":"22222","couter":4,"config":"红|01.jpg|M"}]')	
+存储数据格式：JSON
+	'[{"ID":"22222","couter":4,"config":"红|01.jpg|M"},{},{}]'
+******************************************************
+function Cart(){
+2	this.take=function(){
+		this.storage=window.localStorage.getItem("bbb");//得到字符串
+		if(!this.storage){
+			this.storage=[];
+		}else{
+			this.storage=JSON.parse(this.storage);//数据类型只有：基本数据类型，字符串对象类型
+	this.save=function(){
+		window.localStorage.setItem("bbb",JSON.string//转为字符串
+1	this.plus=function(_identify,_counter,_config){
+		this.take();//取出数据
+		for(var i=0;i<this.storage.length;i++){
+			if(this.storage[i]["ID"]===identify&&this.
+				this.storage[i]+=_counter;
+				_has=1;
+				break;
+		if(_has=0){
+		}
+		this.save()
+		
+		
+	this.
+	this.statistics=function(){
+		let _sum=0;
+		this.take();
+		
+	this.reset=function(){
+		this.take();
+		
+**********************************************************************************************
+function Style(){
+	this.css=function(){
+		
+【】
+function Slider(){
+	this.time=600;
+	this.hz=30;
+	this.calculate=function(){
+		
+	this.move=function(){
+		this.time=window.setInterval
+【回调函数】通过形参调用的函数
+【】
+#slider{width:700px;
+.slider{width:3500px;
+div id=""
+	div class=""
+		img src=""
+		img src=""
+		img src=""
+		img src=""
+		img src=""
+	div
+		img src=""
+function Animal(){
+	var _element=document.getElementByTagName()
+	var _slider=new Slider()
+	_slider.move=({left:-700px,},600,function(){
+		})
+
+window.onload=function(){
+	var _element=document.getElementByTagName()
+*******************************************************************************
+封装的思想
+#demo{}
+function Animate(){
+	
+	this.calculate=function(_css){
+		this.times=this.time/this.hz
+		if(_css.left){
+			this.hs=(_css.left.match(/\d+/g))-_element.offsetLeft)/this.times
+		if(_css.left){
+			this.hs=(_css.left.match(/\d+/g))-_element.offsetLeft)/this.times
+	this.move=function(_css){
+		this.hz=30;
+		this.timer=window.setInterval(function(){
+			_element.style.left=_element.offsetLsft+_me.hs+"px"
+		},this,hz)
+		if(_counter++>=this.times){
+			if(_css.left){
+				_element.left=_css.left;
+			if(_css.left){
+				_element.left=_css.left;
+			if(_css.left){
+				_fx()
+			window.clearInterval()
+_animate
+【瀑布流】
+******************************************************************************************
+
+【】
+写在body里，onclick="javascript:alert（'ok'）"
+八进制数：012
+十六进制0x12
+Number方法：数据类型转换 
+函数被调用时会执行，事件驱动时会执行
+Event:e	onchage
+keyboardEvent{}键盘事件
+mouseEvent
+FocuEvent:onblu	
+函数创建方式：声明function f(){}	赋值var f=function(){}
+变量的提升：
+全局作用域：script里声明的变量
+递归
+object类型：对象类型	构造函数
+[]	new Array()
+数组的遍历：var a[i]	for(var k in A)
+冒泡排序，选择排序
+match()返回值：数组[] 匹配不到null
+replace()接收字符串并全部替换
+ES5:数组方法indexOf()
+forEach(回调函数function(){})
+map()三个参数
+a:97	A:
+toString(16)
+随机数范围：
+day:星期 date:
+new Date("2018-8-14")
+history:
+延时器，定时器
+DOM：操作HTML标签用的
+insertBefore
+元素类型：属性
+非行内样式的兼容：
+event事件的兼容：
+事件委托：
+正则表达式：
+元字符:
+量词：
+引用：RegExp.$1
+text()返回Boolean
+exec()返回类数组的值，第一个元素匹配结果，第二个以后得参数为
+JSON.parse  JSON对象与字符串的转换
+JSON.stringify	
+constrctor()构造器
+【选项卡】
+ 

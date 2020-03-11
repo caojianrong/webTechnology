@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<script src="js/vue.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>{{title}}</h1>
+		<!-- 现实的 -->
+		<div v-if="flash">
+			用户名：<input type="text" placeholder="昵称" v-model="nikename" />
+			<br />
+			内 容：<textarea placeholder="输入内容" v-model="content"></textarea>
+			<br />
+		</div >
+		<!-- 隐藏的 -->
+		<div v-if="show">
+			用户名：<input type="text" placeholder="修改内容" v-model="listes.nikenames" />
+			<br />
+			内 容：<textarea placeholder="输入内容" v-model="listes.contents"></textarea>
+			<br />
+		</div>
+
+		<input type="button"  @click="add" value="留言" v-if="flash"/>
+		<input type="button" @click="app" value="修改" v-if="show"/>
+		<input type="button" value="重置" @click="resets"/>
+		<input type="text" v-model="cptList.item" />
+		<br />
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>昵称</th>
+				<th>内容</th>
+				<th>操作</th>
+			</tr>
+			<tr v-for="(item,index) in list" :key="item.id">
+				<td>{{item.id}}</td>
+				<td>{{item.nikename}}</td>
+				<td>{{item.content}}</td>
+				<td>
+					<button @click="del(index,item.id)">删除</button>
+					<button @click="amend(index,item.id,nikename,content)">修改</button>
+					<button @click="backColor">改色</button>
+				</td>
+			</tr>
+		</table>
+		<button @click="clear">清空留言</button>
+	</div>
+</body>
+<script type="text/javascript">
+	let vm = new Vue({
+		el:"#app",
+		data:{
+			title:'留言板',
+			id:'',
+			nikename:"",
+			content:"",
+			listes:[
+				nikenames="",
+				contents="",
+				id=""
+			],
+			// nikenames:[
+			// 	{name:"",id}
+			// ],
+			// contents:[
+			// 	{work:"",}
+			// ],
+			search:'',
+			list:[
+				{id:1,nikename:'ajkx',content:'没出息'},
+				{id:2,nikename:'ddd',content:'怎么办嘞'}
+			],
+			flash:true,
+			show:false,
+		},
+		computed:{
+			cptList(){
+				console.log('计算属性运行了');
+				let result=[];
+				this.list.forEach((item,index)=>{
+					if(item.nikename.includes(this.search) || item.content.includes(this.search)){
+						result.push(item);
+					}
+				})
+				
+				return result;
+				
+			}
+		},
+		methods:{
+			// 留言
+			add(){
+				this.list.push({
+					id: this.list.length+1,
+					nikename:this.nikename,
+					content: this.content,
+				})
+				this.nikename='';
+				this.content='';
+			},
+			
+			del(index,id){
+				this.list.splice(index,id);
+			},
+			amend(index,id,nikename,content){
+				this.flash=false;
+				this.show=true;
+				// console.log(this.list[index].content)
+				// console.log(this.list[index].id)
+				// this.nikename.push(this.list[index].nikename)
+				// this.content.push(this.list[index].content)
+				this.listes.contents=this.list[index].content;
+				this.listes.nikenames=this.list[index].nikename;
+				this.listes.id=this.list[index].id;
+				console.log(this.listes)
+				
+				// this.list[index].nikename = nikename;
+
+			},
+			// 修改
+			app(){
+				this.flash=true;
+				this.show=false;
+				console.log(this.listes.nikenames)
+				console.log(this.listes.contents)
+				console.log(this.listes.id)
+				console.log(this.list[Number(this.listes.id)-1].content)
+				this.list[Number(this.listes.id)-1].content=this.listes.contents;
+				this.list[Number(this.listes.id)-1].nikename=this.listes.nikenames;
+				
+			},
+			clear(){
+				this.list = [];
+			},
+			backColor(ev){
+				ev.target.parentNode.parentNode.style.background="red";
+				
+			},
+			resets(){
+				this.nikename="";
+				this.content="";
+			}
+		}
+	})
+</script>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+【】middle为垂直对齐方式中的属性值valign
+left/center/right都为水平对齐方式align=""的属性值
+【】form表单域
+input,select为表单元素
+【】去掉列表符号的声明为list-style:none;list-style-type:none
+【】单标签br hr
+【】border为复合属性，由border-width,border-style,border-color组成
+【】text-indent,margin的属性允许属性值为负数，padding的属性值不可以为负数，width可以写百分比
+【】css选择符命名规范的要求有
+A
+尽量不要用缩写英文除非可以一目了然的
+B
+所有的命名最好都小写
+C
+所有的命名最好用数字开头
+D
+坚持以字母开头命名选择器，这样可保证在所有浏览器下都能兼容
+正确答案: A,B,D
+解析:调用和命名大小写如果不一致，会找不到，所以最好都小写
+【】XHTML和HTML错误描述的是（ ）？
+A
+XHTML元素必须被正确地嵌套
+B
+XHTML元素必须被关闭
+C
+标签名必须用小写字母
+D
+XHTMl文档可以没有根元素
+【】<!doctype>用来定义文档类型
+【】white-space的属性:
+normal：默认值，多余空白会被浏览器忽略只保留一个；
+pre：空白会被浏览器保留；
+pre-wrap：保留一部分空白符序列，但是正常的进行换行；
+pre-line:合并空白符序列，但是保留换行符；
+nowrap:文本不会换行，文本会在同一行上继续，直到遇到<br/>标签为止;
+【】none、inline、table、table-row都是属于display的属性值
+【】以解决高度塌陷的是（）
+A
+给浮动元素的父元素添加声明overflow:hidden
+B
+在浮动元素下方添加空div,并给该元素添加声明：clear:both;height:0;overflow:hidden;
+C
+:after{content:".";clear:both;display:block;height:0;overflow:hidden;visibility:hidden;}
+【】很多时候我 们希望元素的大小能够根据窗口或子元素自动调整, 这就是自适应，而高度自适应就是{height:auto;}或者高度不写
+【】常见的行内元素有a  span  em  i  b strong
+【】table是块元素，input，i，br都是内联元素
+【】a color不传递
+【】input标签的属性有
+A
+name
+B
+selected
+C
+rows
+D
+value
+正确答案: A,D checked
+【】背景属性background-size的哪个值既不会被裁切也不会变形（    ）
+A
+cover
+B
+contain
+C
+100% auto
+D
+100% 100%
+正确答案: B
+解析:
+contain:图片自身的宽高比不变，缩放至图片自身能完全显示出来cover不会变形，100% auto不能完全覆盖，100% 100%会变形 contain不能完全覆盖
+【】px像素，是绝对长度单位的一种，它的大小是根据用户屏幕显示器的分辨率决定的（因此不同的设备显示相同的像素值也可能会有不同的结果）
+em是相对长度单位,相对于应用当前文本的字体尺寸。如果当前文本的字体尺寸未被定义，则相对于浏览器的默认字体尺寸。
+rem是CSS3新增的一个相对单位（root em，根em）是相对于<html>根元素的字体尺寸。
+%是相对于父元素的尺寸，这和em(相对于当前元素的字体尺寸)以及rem（相对于根元素的字体尺寸）都不同。
+【】order属性
+【】stretch侧轴中拉伸
+【】IE盒子模型中：盒子总宽度 = width
+正确答案: D
+解析:
+标准盒子模型中：盒子的总宽度 = 左右padding + 左右border + width
+【】box-sizing属性可以为三个值之一：content-box（default），border-box
+
+content-box，border和padding不计算入width之内
+
+border-box，border和padding计算入width之内，其实就是怪异模式了~
+【】CSS Sprites描述错误的是（  ）？
+A
+CSS Sprites是图片整合技术
+B
+能减少HTPP的请求次数，提高网页的性能
+C
+CSS Sprites让小图标比大图更灵活
+D
+能减少图片的字节
+正确答案: C
+【】从优化的角度来说以下哪个img属性是优化比较好的
+A
+width
+B
+border
+C
+alt
+D
+height
+正确答案: C
+解析:
+alt为替换文本，当图片不显示的时候才会出现。也被称作图片名，方便SEO搜索
+【】文本的垂直居中设置行高等于容器的高度
+【】align属性 left把文本排列到左边。默认值：由浏览器决定。right把文本排列到右边。center把文本排列到中间。justify实现两端对齐文本效果。inherit规定应该从父元素继承 text-align 属性的值。 
+【】关于背景图和img的说法正确的是
+A
+背景图和img一样，都是在网页中占空间的
+B
+背景图的显示需要根据其所在元素的区域显示
+C
+背景图和img都属于对页面样式的渲染
+D
+img标签在页面中和背景图都是不占据空间的
+正确答案: B
+解析:
+背景图属于css样式、img属于html结构。
+【】根据css的语法，分析下面代码，判断以下选项中表示“属性”的选项是？
+ p{color:red;font-size:30px;font-family:"宋体";}
+A
+p
+B
+color
+C
+30px
+D
+宋体
+正确答案: B
+解析:
+p代表选择符；30px 和“宋体”代表属性值，color表示设置文本颜色的属性，
+【】css hack是解决bug的方法。但是其中存在一定的副作用。css hack是一种个人对css代码的非官方修改、会增加代码负担，降低代码的可读性
+【】<a href="#">
+      <img src="" alt="">
+</a>
+图片在IE浏览器中会出现蓝颜色的边框
+【】position的描述：此属性规定元素的定位类型，所有属性都可以使用，此属性有四个属性值，分别是static、absolute、relative、fixed
+【】absolute定位的描述：absolute定位的元素可以使用z-index属性，添加absolute定位的元素的堆叠顺序比没有添加position声明的元素高，
+可以结合left，top，right，bottom属性，确定元素定位的坐标，
+【】哪些元素默认会自带边框
+A
+hr
+B
+textarea
+C
+td
+D
+table
+正确答案: A,B
+解析:
+hr为水平线，textarea为文本域
+【】可以设置内容大小写的属性text-transform font-variant
+【】font-weight:800;文字加粗
+【】如下代码 <div class='box'> <img src=""> <img src=""> </div> 两张图片之间会产生左右间距，如何解决（）
+A
+*{padding:0;margin:0;}
+B
+img{overflow:hidden;}
+C
+img{float:left}
+D
+img的html代码不换行
+正确答案: C,D
+解析:
+默认情况下img的display的属性值为inline( inline-block );    两张图片之间会产生间距
+解决方法：
+给图片转成块状元素然后添加浮动
+图片之间不存在回车键
+【】如何让元素宽度自适应于内容（）
+A
+给元素设置float：left
+B
+给元素设置position:absolute
+C
+给元素设置display:block
+D
+给元素设置display:inline-block
+正确答案: A,B,D
+解析:
+块级元素宽度不能自适应于内容，所以C不对
+
